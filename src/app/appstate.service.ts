@@ -11,14 +11,14 @@ export class AppstateService {
 
   heroes: Hero[] = [
     {
-      name: 'jake',
+      name: 'jake the snake',
       health: 100,
       attack: 5,
       class: 'warrior',
       imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Wind/Blue%20Mage1%20-%20Walk.gif'
     },
     {
-      name: 'mick',
+      name: 'mick the sheep',
       health: 80,
       attack: 10,
       class: 'wizard',

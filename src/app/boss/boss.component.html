@@ -1,5 +1,12 @@
 <div class="text-center">
-  <img [src]="boss.imgUrl" [alt]="boss.name" class="img-fluid">
-  <p class="fs-2">{{boss.name}}</p>
-
+  <img (click)="attackBoss()" [src]="boss.imgUrl" [alt]="boss.name" class="img-fluid">
+  <kbd class="fs-2 d-block">
+    <p class="mb-0">
+      {{boss.name}}
+    </p>
+    <div class="progress mb-2">
+      <div class="progress-bar" role="progressbar" [style.width]="bossHealthPercent + '%'"
+        [ariaValueNow]="bossHealthPercent" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </kbd>
 </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Hero } from '../interfaces/hero';
 
 @Component({
   selector: 'app-hero',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+  @Input() hero!: Hero
 }

@@ -6,4 +6,11 @@ export interface Hero {
   imgUrl: string
 }
 
-type Class = 'thief' | 'cleric' | 'warrior' | 'wizard'
+type Class = 'cleric' | 'warrior' | 'wizard'
+
+type ImgUrls = {
+  idle: string
+  attack: string
+  hurt: string
+  celebrate: string
+}

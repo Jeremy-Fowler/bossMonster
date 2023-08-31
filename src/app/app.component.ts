@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AppstateService } from './appstate.service';
+import { Hero } from './interfaces/hero';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bossMonster';
+  constructor(private appState: AppstateService) { }
+  title = 'Boss Monster';
+  heroes: Hero[] = this.appState.heroes
 }
