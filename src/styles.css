@@ -2,4 +2,5 @@
 body{
   background-image: url(https://bghq.com/bgs/snes/f/ff5/a518.png);
   background-size: cover;
+  background-repeat: no-repeat;
 }

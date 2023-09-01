@@ -4,4 +4,5 @@ export interface Boss {
   maxHealth: number
   imgUrl: string
   attack: number
+  treasures: number[]
 }

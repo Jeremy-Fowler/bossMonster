@@ -23,7 +23,7 @@ export class AppstateService {
       attack: 10,
       class: 'wizard',
       imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Fire/Beastmaster1%20-%20Walk.gif'
-    }
+    },
   ]
 
   heroesForHire: Hero[] = [
@@ -48,7 +48,21 @@ export class AppstateService {
     imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Enemies/Skeleton.gif',
     maxHealth: 100,
     health: 100,
-    attack: 10
+    attack: 10,
+    treasures: [10, 30, 100]
   }
+
+  bosses: Boss[] = [
+    this.boss,
+    {
+      name: 'loud baby',
+      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Enemies/Zu.gif',
+      maxHealth: 250,
+      health: 250,
+      attack: 20,
+      treasures: [50, 100, 500]
+
+    },
+  ]
 
 }

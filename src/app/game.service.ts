@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AppstateService } from './appstate.service';
+import { Boss } from './interfaces/boss';
 
 @Injectable({
   providedIn: 'root'
@@ -16,14 +17,19 @@ export class GameService {
 
   attackBoss() {
     this.appState.heroes.forEach(hero => {
-      if (hero.health < 1) {
-        return
-      }
+      if (hero.health < 1) { return }
+
       const boss = this.appState.boss
       boss.health -= hero.attack
-      if (boss.health < 0) {
+      if (boss.health <= 0) {
         boss.health = 0
+        this.bossDies(boss)
       }
     })
+  }
+
+  bossDies(deadBoss: Boss) {
+    const randomIndex = Math.floor(Math.random() * deadBoss.treasures.length)
+    this.appState.gold += deadBoss.treasures[randomIndex]
   }
 }
