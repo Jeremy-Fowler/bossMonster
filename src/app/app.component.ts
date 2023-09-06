@@ -11,4 +11,8 @@ export class AppComponent {
   constructor(private appState: AppstateService) { }
   title = 'Boss Monster';
   heroes: Hero[] = this.appState.heroes
+
+  get gold() {
+    return this.appState.gold
+  }
 }

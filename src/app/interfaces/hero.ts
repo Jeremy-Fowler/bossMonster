@@ -4,6 +4,7 @@ export interface Hero {
   attack: number
   class: Class
   imgUrl: string
+  price: number
 }
 
 type Class = 'cleric' | 'warrior' | 'wizard'

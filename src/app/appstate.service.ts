@@ -15,45 +15,48 @@ export class AppstateService {
       health: 100,
       attack: 5,
       class: 'warrior',
-      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Wind/Blue%20Mage1%20-%20Walk.gif'
-    },
+      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Wind/Blue%20Mage1%20-%20Walk.gif',
+      price: 0
+    }
+  ]
+
+  heroesForHire: Hero[] = [
     {
       name: 'mick the sheep',
       health: 80,
       attack: 10,
       class: 'wizard',
-      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Fire/Beastmaster1%20-%20Walk.gif'
+      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Fire/Beastmaster1%20-%20Walk.gif',
+      price: 20
     },
-  ]
-
-  heroesForHire: Hero[] = [
     {
-      name: 'sam',
+      name: 'sam the wild',
       health: 50,
       attack: 15,
       class: 'warrior',
-      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Earth/Samurai2%20-%20Walk.gif'
+      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Earth/Samurai2%20-%20Walk.gif',
+      price: 50
     },
     {
-      name: 'miles',
+      name: 'miles the robed',
       health: 80,
       attack: 10,
-      class: 'cleric',
-      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Wind/White%20Mage3%20-%20Walk.gif'
+      class: 'warrior',
+      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Party/Wind/White%20Mage3%20-%20Walk.gif',
+      price: 100
     }
   ]
 
-  boss: Boss = {
-    name: 'skelly',
-    imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Enemies/Skeleton.gif',
-    maxHealth: 100,
-    health: 100,
-    attack: 10,
-    treasures: [10, 30, 100]
-  }
 
   bosses: Boss[] = [
-    this.boss,
+    {
+      name: 'skelly',
+      imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Enemies/Skeleton.gif',
+      maxHealth: 100,
+      health: 100,
+      attack: 10,
+      treasures: [10, 30, 100]
+    },
     {
       name: 'loud baby',
       imgUrl: 'http://www.videogamesprites.net/FinalFantasy5/Enemies/Zu.gif',
@@ -64,5 +67,5 @@ export class AppstateService {
 
     },
   ]
-
+  boss: Boss = this.bosses[0]
 }

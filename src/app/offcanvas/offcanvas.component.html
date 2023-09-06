@@ -1,21 +1,32 @@
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <p class="offcanvas-title fs-5" id="offcanvasExampleLabel">Shop</p>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <div>
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+
+    <p class="fs-3">Gold: {{gold}}</p>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <button (click)="buyPotion()" class="btn btn-primary me-2" [disabled]="gold < 50">Buy</button>
+      <span>Potion <i class="mdi mdi-beaker-plus"></i></span>
+      <span>$50</span>
     </div>
-    <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <button (click)="buyRevive()" class="btn btn-primary me-2" [disabled]="gold < 100 || nobodyIsDead">Buy</button>
+      <span>Revive <i class="mdi mdi-feather text-info"></i></span>
+      <span>$100</span>
     </div>
+
+
+
+    <div *ngFor="let hero of heroes" class="d-flex justify-content-between align-items-center mb-3">
+      <button (click)="buyHero(hero)" class="btn btn-primary me-2" [disabled]="gold < hero.price">Buy</button>
+      <span>{{hero.name | titlecase}} <i class="mdi mdi-sword"></i></span>
+      <span>${{hero.price}}</span>
+    </div>
+
+
   </div>
 </div>

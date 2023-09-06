@@ -1,19 +1,27 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12 text-end p-3">
-      <button class="btn btn-success" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Shop</button>
-    </div>
-  </div>
-  <div class="row mt-5 justify-content-between align-items-end">
-    <div class="col-4">
-      <app-boss></app-boss>
-    </div>
-    <div class="col-4">
-      <div *ngFor="let hero of heroes">
-        <app-hero [hero]="hero"></app-hero>
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-end p-3">
+        <kbd class="me-3">Gold: {{gold}}</kbd>
+        <button class="btn btn-success" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Shop</button>
       </div>
     </div>
   </div>
-</div>
+</header>
+
+<main>
+  <div class="container-fluid">
+    <div class="row mt-5 justify-content-between align-items-end">
+      <div class="col-4">
+        <app-boss></app-boss>
+      </div>
+      <div class="col-4">
+        <div *ngFor="let hero of heroes">
+          <app-hero [hero]="hero"></app-hero>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 
 <app-offcanvas></app-offcanvas>
